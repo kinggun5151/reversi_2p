@@ -1,0 +1,10 @@
+C:\Users\ma_kh\source\repos\reversi_2p\reversi_2p\bin\Debug\reversi_2p.exe.config
+C:\Users\ma_kh\source\repos\reversi_2p\reversi_2p\bin\Debug\reversi_2p.exe
+C:\Users\ma_kh\source\repos\reversi_2p\reversi_2p\bin\Debug\reversi_2p.pdb
+C:\Users\ma_kh\source\repos\reversi_2p\reversi_2p\obj\Debug\reversi_2p.csproj.AssemblyReference.cache
+C:\Users\ma_kh\source\repos\reversi_2p\reversi_2p\obj\Debug\reversi_2p.Form1.resources
+C:\Users\ma_kh\source\repos\reversi_2p\reversi_2p\obj\Debug\reversi_2p.Properties.Resources.resources
+C:\Users\ma_kh\source\repos\reversi_2p\reversi_2p\obj\Debug\reversi_2p.csproj.GenerateResource.cache
+C:\Users\ma_kh\source\repos\reversi_2p\reversi_2p\obj\Debug\reversi_2p.csproj.CoreCompileInputs.cache
+C:\Users\ma_kh\source\repos\reversi_2p\reversi_2p\obj\Debug\reversi_2p.exe
+C:\Users\ma_kh\source\repos\reversi_2p\reversi_2p\obj\Debug\reversi_2p.pdb
