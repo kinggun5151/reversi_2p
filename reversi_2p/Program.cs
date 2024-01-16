@@ -16,9 +16,49 @@ namespace reversi_2p
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new revesi_FW());
         }
 
         
+    }
+    class Game
+    {
+        public enum Turn {Black,White };
+        static char[,] GamesStartingFormat = {{ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
+                                              { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
+                                              { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
+                                              { ' ', ' ', ' ', 'W', 'B', ' ', ' ', ' ' },
+                                              { ' ', ' ', ' ', 'B', 'W', ' ', ' ', ' ' },
+                                              { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
+                                              { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
+                                              { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' } };
+
+        
+
+        char[,] GameBoard = new char[8, 8];
+         Turn PlayerTurn;
+
+        public char GetBoardState(string Name)
+        {
+            
+            return GameBoard [Name[1] - '0', Name[3] - '0'];
+        }
+        public void SetMove(string Move)
+        {
+            if (!IsTheMoveValid(Move))
+                return;
+        }
+
+        private bool IsTheMoveValid(string move)
+        {
+            return true;
+        }
+
+        public void ResetGame()
+        {
+            GameBoard = GamesStartingFormat;
+            PlayerTurn = Turn.White;
+        }
+
     }
 }
