@@ -36,6 +36,7 @@ namespace reversi_2p
         private void SetBoardState()
         {
             string Name = "b";
+            Turn.Text = MyGame.PlayerTurn.ToString();
             for (int i = 0; i < 8; i++)
                 for (int j = 0; j < 8; j++)
                 {
