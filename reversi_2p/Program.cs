@@ -33,7 +33,13 @@ namespace reversi_2p
             public bool ISRWay;
         }
 
-        static char[,] GamesStartingFormat = {{ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
+        public struct Score
+        {
+            public int White;
+            public int Black;
+        }
+        public Score GameScore =new Score();
+        public static char[,] GamesStartingFormat = {{ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
                                               { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
                                               { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
                                               { ' ', ' ', ' ', 'W', 'B', ' ', ' ', ' ' },
@@ -42,7 +48,7 @@ namespace reversi_2p
                                               { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
                                               { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' } };
 
-        
+        public bool GameOver = false;
 
         char[,] GameBoard = new char[8, 8];
         public Turn PlayerTurn;
@@ -70,7 +76,30 @@ namespace reversi_2p
             if (CheckDirection(Move, MDirection.DL).ISRWay)
                 FixBetweenCubes(Move, MDirection.DL, CheckDirection(Move, MDirection.DL).DStack);
             NextTurn();
-           
+            if (IsGameover())
+                GameOver = true;
+            CallculateScore();
+        }
+
+        private void CallculateScore()
+        {
+            int WScore = 0;
+            int BScore = 0;
+            for (int i=0;i<8;i++)
+                for(int j=0;j<8;j++)
+                {
+                    if (GameBoard[i, j] == 'W')
+                        WScore++;
+                    if (GameBoard[i, j] == 'B')
+                        BScore++;
+                }
+            GameScore.White = WScore;
+            GameScore.Black = BScore;
+        }
+
+        private bool IsGameover()
+        {
+            return false;
         }
 
         private void FixBetweenCubes(string move, MDirection mDirection, Stack<char> dStack)
@@ -222,7 +251,9 @@ namespace reversi_2p
     
         public void ResetGame()
         {
+            
             GameBoard = GamesStartingFormat;
+            CallculateScore();
             PlayerTurn = Turn.White;
         }
 

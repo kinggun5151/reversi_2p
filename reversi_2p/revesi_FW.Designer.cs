@@ -95,6 +95,12 @@ namespace reversi_2p
             this.b0_6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Turn = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Reset = new System.Windows.Forms.Button();
+            this.White_score = new System.Windows.Forms.Label();
+            this.Black_score = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // b0_0
@@ -756,11 +762,75 @@ namespace reversi_2p
             this.Turn.Size = new System.Drawing.Size(0, 29);
             this.Turn.TabIndex = 66;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 138);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 29);
+            this.label2.TabIndex = 67;
+            this.label2.Text = "White :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 176);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 29);
+            this.label3.TabIndex = 68;
+            this.label3.Text = "Black :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 378);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 29);
+            this.label4.TabIndex = 69;
+            this.label4.Text = "Turn :";
+            // 
+            // Reset
+            // 
+            this.Reset.Location = new System.Drawing.Point(41, 754);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(106, 68);
+            this.Reset.TabIndex = 70;
+            this.Reset.Text = "Reset";
+            this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.Click += new System.EventHandler(this.Rest_Click);
+            // 
+            // White_score
+            // 
+            this.White_score.AutoSize = true;
+            this.White_score.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.White_score.Location = new System.Drawing.Point(110, 138);
+            this.White_score.Name = "White_score";
+            this.White_score.Size = new System.Drawing.Size(0, 29);
+            this.White_score.TabIndex = 71;
+            // 
+            // Black_score
+            // 
+            this.Black_score.AutoSize = true;
+            this.Black_score.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Black_score.Location = new System.Drawing.Point(108, 176);
+            this.Black_score.Name = "Black_score";
+            this.Black_score.Size = new System.Drawing.Size(0, 29);
+            this.Black_score.TabIndex = 72;
+            // 
             // revesi_FW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1072, 948);
+            this.Controls.Add(this.Black_score);
+            this.Controls.Add(this.White_score);
+            this.Controls.Add(this.Reset);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.Turn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.b1_6);
@@ -903,6 +973,12 @@ namespace reversi_2p
         private System.Windows.Forms.Button b0_6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Turn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button Reset;
+        private System.Windows.Forms.Label White_score;
+        private System.Windows.Forms.Label Black_score;
     }
 }
 

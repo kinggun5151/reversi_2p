@@ -55,12 +55,27 @@ namespace reversi_2p
                                 control.BackColor = Color.Black;
                             control.Enabled = false;
                         }
+                        else if(control is Button)
+                        {
+                            control.Enabled = true;
+                            control.Text = " ";
+                            control.BackColor = SystemColors.Control;
+                        }
 
                     }
 
 
                     
                 }
+
+            White_score.Text = MyGame.GameScore.White.ToString();
+            Black_score.Text = MyGame.GameScore.Black.ToString();
+        }
+
+        private void Rest_Click(object sender, EventArgs e)
+        {
+            MyGame.ResetGame();
+            SetBoardState();
         }
     }
 }
